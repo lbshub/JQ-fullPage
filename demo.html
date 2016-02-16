@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>fullPage</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        html,body{width: 100%; height: 100%; overflow: hidden;}
+        .fp_wrapper{width: 100%; overflow: hidden;}
+        .fp_page{ color: #fff; font-size: 100px;}
+        .page1{background: #000;}
+        .page2{background: #0f0; position: relative;}
+        .page3{background: #f00;}
+        .page4{background: #00f;}
+        .page5{background: #0ff;}
+        .box{position: absolute;}
+        .box li{list-style: none;}
+        .b1{background: blue;}
+        .b2{background: green;}
+        .b3{background: black;}
+        .prev, .next{position: absolute;  top: 50%; margin-top: -25px; width: 50px; height: 50px; line-height: 50px; background: #f00; color: #fff; font-size: 50px; text-align: center; cursor: pointer;}
+        .prev{ left: 10px; }
+        .next{ right: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="fp_wrapper" id="fp_wrapper">
+	<div class="fp_page page1">1</div>
+    <div class="fp_page page2">
+        <ul class="box" id="box">
+            <li class="b1">2-1</li>
+            <li class="b2">2-2</li>
+            <li class="b3">2-3</li>
+        </ul>
+        <div class="prev" id="prev">&lt;</div>
+        <div class="next" id="next">&gt;</div>
+    </div>
+    <div class="fp_page page3">3</div>
+    <div class="fp_page page4">4</div>
+    <div class="fp_page page5">5</div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/fullPage.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    var fp = new fullPage({
+        wrapper: '#fp_wrapper',
+        end: function(index) {
+            if (index === 2) {
+                // alert('这是第三屏！');
+            }
+        }
+    });
+    var fp2 = new fullPage({
+        direction: 'left',
+        wrapper: '#box',
+        current: 'current',
+        mouseShow: false
+    });
+    document.getElementById('prev').onclick = function(){
+        fp2.scrollToPrev();
+    };
+    document.getElementById('next').onclick = function(){
+        fp2.scrollToNext();
+    };
+    
+});
+</script>
+</body>
+</html>

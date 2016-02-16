@@ -1,0 +1,200 @@
+*{ margin:0; padding:0; }
+html,body{ overflow:hidden; height:100%; width:100%;}
+ul, li{ list-style:none;}
+img, a img{ border:0 none;}
+body{ font-family:"Microsoft Yahei"; background:#010101 url(../images/zj_bg.jpg) fixed center bottom no-repeat;}
+
+.fp_wrapper{ width: 100%; overflow: hidden; }
+
+.fp_navigation{ position:fixed; right:10px; top:50%; z-index:999;  width:20px; _position:absolute; _top:expression(document.documentElement.scrollTop+documentElement.clientHeight - 300)!important;_margin-top:0;}
+.fp_navigation li{ position:relative; list-style:none; width:20px; height:20px; padding:0; margin:0; text-align:center;vertical-align:top;}
+.fp_navigation li a{ display:inline-block; text-decoration:none; width:10px; height:10px; background:#999; border-radius:50%; overflow:hidden; font-size:0;line-height:0;color:rgba(0,0,0,0); }
+.fp_navigation li a:hover{background: #f5f5f5;}
+.fp_navigation li.current a{ background:#fff;}
+.fp_navigation li div{ display:none; position:absolute; right:20px; top:5px; *top:3px; _right:18px; text-align:right; width:150px; height:15px; font-size:12px; color:#ccc; line-height:12px;}
+
+.fp_arrow{ background:url(../images/arrow.png) no-repeat;}
+.fp_arrow{position:absolute; left:50%; bottom:10px;  z-index:8888; width:48px; height:48px; margin-left:-24px; cursor:pointer; -webkit-animation:start 1.5s infinite ease-in-out;-moz-animation:start 1.5s infinite ease-in-out;animation:start 1.5s infinite ease-in-out;_position:absolute; _top:expression(document.documentElement.scrollTop+documentElement.clientHeight - 10)!important;_bottom:0;}
+
+@-webkit-keyframes start{0%,30%{opacity:0;-webkit-transform:translate(0,-8px);}
+60%{opacity:1;-webkit-transform:translate(0,0);}
+100%{opacity:0;-webkit-transform:translate(0,10px);}}
+@-moz-keyframes start{0%,30%{opacity:0;-moz-transform:translate(0,-8px);}
+60%{opacity:1;-moz-transform:translate(0,0);}
+100%{opacity:0;-moz-transform:translate(0,10px);}}
+@keyframes start{0%,30%{opacity:0;transform:translate(0,-8px);}
+60%{opacity:1;transform:translate(0,0);}
+100%{opacity:0;transform:translate(0,10px);}}
+
+/*-------------------------------------------------------------*/
+
+.fp_page{position:relative; height:100%; width:100%; overflow:hidden; }
+
+/*重要的样式设置  所有页的内容先隐藏*/
+/*
+.fp_page *{visibility:hidden;}
+.current *, .backwind *{ visibility: visible;}
+*/
+/*-------------------------------------------------------------*/
+
+.qbz_center{ width:1200px; height:700px; position:absolute; left:50%; top:50%; margin:-350px 0 0 -600px;}
+
+/*-------------------------------------------------------------*/
+#section0 .qbz_center{height:440px;margin-top:-220px;} 
+#section0 .g1{position:absolute;left:50%;top:0;margin-left:-205px;}
+.current .g1{ animation:FadeInT 1.5s both; -webkit-animation:FadeInT 1.5s both; }
+.backwind .g1{ animation:FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section0 .g2{position:absolute;left:50%;top:115px;margin-left:-346px;}
+.current .g2{ animation:BounceIn 1.5s both; -webkit-animation:BounceIn 1.5s both; }
+.backwind .g2{ animation:zoomOut 0.5s both; -webkit-animation:zoomOut 0.5s both; }
+
+#section0 .g3{position:absolute;left:50%;top:265px;margin-left:-266px;}
+.current .g3{ animation:FadeInB 1.5s 0.5s both; -webkit-animation:FadeInB 1.5s 0.5s both; }
+.backwind .g3{ animation:FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+/*-------------------------------------------------------------*/
+#section1 .a1{position:absolute;left:80px;top:10px;}
+.current .a1{ animation:FadeInT 1.5s both; -webkit-animation:FadeInT 1.5s both; }
+.backwind .a1{ animation:FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section1 .a2{position:absolute;left:50%;top:10px;margin-left:-74px;}
+.current .a2{ animation:fadeInToBottom 1.5s both; -webkit-animation:fadeInToBottom 1.5s both; }
+.backwind .a2{ animation:zoomOut 1.5s both; -webkit-animation:zoomOut 1.5s both; }
+
+#section1 .a3{position:absolute;left:50%;bottom:20px;margin-left:-183px;}
+.current .a3{ animation:zoomIn 1.5s both; -webkit-animation:zoomIn 1.5s both; }
+.backwind .a3{ animation:FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+#section1 .a4{position:absolute;left:0;bottom:80px;}
+.current .a4{ animation:FadeInL 1s 1s both; -webkit-animation:FadeInL 1s 1s both; }
+.backwind .a4{ animation:FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section1 .a5{position:absolute;right:0;bottom:80px;}
+.current .a5{ animation:FadeInR 1s 1s both; -webkit-animation:FadeInR 1s 1s both; }
+.backwind .a5{ animation:FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+/*-------------------------------------------------------------*/
+#section2 .b1{position:absolute;left:50%;top:110px;margin-left:-196px;}
+.current .b1{ animation: zoomIn 1.5s both; -webkit-animation:zoomIn 1.5s both; }
+.backwind .b1{ animation: FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section2 .b2{position:absolute;left:50%;bottom:30px;margin-left:-407px;}
+.current .b2{ animation: FadeInB 2s 1s both; -webkit-animation:FadeInB 2s 1s both; }
+.backwind .b2{ animation: FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+#section2 .b3{position:absolute;left:304px;top:54px;}
+.current .b3{ animation:FadeInL 1.5s 0.5s both; -webkit-animation:FadeInL 1.5s 0.5s both;}
+.backwind .b3{ animation: FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section2 .b4{position:absolute;left:270px;top:210px;}
+.current .b4{animation:FadeInL 1.5s 0.8s both; -webkit-animation:FadeInL 1.5s 0.8s both; }
+.backwind .b4{ animation: FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section2 .b5{position:absolute;left:295px;top:375px;}
+.current .b5{animation:FadeInL 1.5s 1.2s both; -webkit-animation:FadeInL 1.5s 1.2s both; }
+.backwind .b5{ animation: FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section2 .b6{position:absolute;right:304px;top:54px;}
+.current .b6{animation:FadeInR 1.5s 0.5s both; -webkit-animation:FadeInR 1.5s 0.5s both; }
+.backwind .b6{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+#section2 .b7{position:absolute;right:220px;top:215px;}
+.current .b7{animation:FadeInR 1.5s 1.5s both; -webkit-animation:FadeInR 1.5s 1.5s both; }
+.backwind .b7{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+#section2 .b8{position:absolute;right:260px;top:370px;}
+.current .b8{animation:FadeInR 1.5s 1.2s both; -webkit-animation:FadeInR 1.5s 1.2s both; }
+.backwind .b8{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+/*-------------------------------------------------------------*/
+#section3 .c1{position:absolute;left:0;top:85px;}  
+.current .c1{animation:zoomIn 1.5s both; -webkit-animation:zoomIn 1.5s both; }
+.backwind .c1{ animation: FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section3 .c2{position:absolute;left:600px;top:85px;}  
+.current .c2{animation:zoomIn 1.5s 0.4s both; -webkit-animation:zoomIn 1.5s 0.4s both; }
+.backwind .c2{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+#section3 .c3{position:absolute;left:0;top:360px;} 
+.current .c3{animation:zoomIn 1.5s 0.8s both; -webkit-animation:zoomIn 1.5s 0.8s both; }
+.backwind .c3{ animation: FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section3 .c4{position:absolute;left:600px;top:360px;} 
+.current .c4{animation:zoomIn 1.5s 1.2s both; -webkit-animation:zoomIn 1.5s 1.2s both; }
+.backwind .c4{ animation: FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+/*-------------------------------------------------------------*/
+#section4 .d1{position:absolute;left:0;top:45px;}
+.current .d1{animation:zoomIn 1.5s both; -webkit-animation:zoomIn 1.5s both; }
+.backwind .d1{ animation: FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section4 .d2{position:absolute;right:0;top:85px;}
+.current .d2{animation:zoomIn 1.5s 0.4s both; -webkit-animation:zoomIn 1.5s 0.4s both; }
+.backwind .d2{ animation: FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section4 .d3{position:absolute;left:80px;bottom:260px;}  
+.current .d3{animation:FadeInL 1.5s 0.8s both; -webkit-animation:FadeInL 1.5s 0.8s both; }
+.backwind .d3{ animation: FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section4 .d4{position:absolute;right:0;bottom:260px;}  
+.current .d4{animation:FadeInR 1.5s 1s both; -webkit-animation:FadeInR 1.5s 1s both; }
+.backwind .d4{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+#section4 .d5{position:absolute;left:0;bottom:70px;}  
+.current .d5{animation:zoomIn 1.5s 1.2s both; -webkit-animation:zoomIn 1.5s 1.2s both; }
+.backwind .d5{ animation: FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+#section4 .d6{position:absolute;right:0;bottom:70px;}
+.current .d6{animation:zoomIn 1.5s 1.2s both; -webkit-animation:zoomIn 1.5s 1.2s both; }
+.backwind .d6{ animation: FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+/*-------------------------------------------------------------*/
+#section5 .e1{position:absolute;left:55px;top:28px;}  
+.current .e1{animation:FadeInL 1.5s both; -webkit-animation:FadeInL 1.5s both; }
+.backwind .e1{ animation: FadeOutT 0.5s both; -webkit-animation:FadeOutT 0.5s both; }
+
+#section5 .e2{position:absolute;left:55px;top:148px;}
+.current .e2{animation:FadeInL 1.5s 0.4s both; -webkit-animation:FadeInL 1.5s 0.4s both; }
+.backwind .e2{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+#section5 .e3{position:absolute;left:55px;top:268px;}
+.current .e3{animation:FadeInL 1.5s 0.8s both; -webkit-animation:FadeInL 1.5s 0.8s both; }
+.backwind .e3{ animation: FadeOutL 0.5s both; -webkit-animation:FadeOutL 0.5s both; }
+
+#section5 .e4{position:absolute;left:55px;top:388px;}
+.current .e4{animation:FadeInL 1.5s 1.2s both; -webkit-animation:FadeInL 1.5s 1.2s both; }
+.backwind .e4{ animation: FadeOutR 0.5s both; -webkit-animation:FadeOutR 0.5s both; }
+
+#section5 .e5{position:absolute;left:55px;top:508px;}
+.current .e5{animation:FadeInL 1.5s 1.6s both; -webkit-animation:FadeInL 1.5s 1.6s both; }
+.backwind .e5{ animation: FadeOutB 0.5s both; -webkit-animation:FadeOutB 0.5s both; }
+
+#section5 .e6{position:absolute;left:50%;bottom:0; margin-left:-132px}  
+.current .e6{animation:zoomIn 1.5s 2s both; -webkit-animation:zoomIn 1.5s 2s both; }
+.backwind .e6{ animation: zoomOut 0.5s both; -webkit-animation:zoomOut 0.5s both; }
+
+/*-------------------------------------------------------------*/
+.fp_star{position:absolute;z-index:8888;width:35px;height:35px;background:url(../images/star.png) no-repeat;}
+.star1{left:100%;top:-35px;-webkit-animation:star1 1.8s ease-in infinite;animation:star1 1.8s ease-in infinite;}
+.star2{left:90%;top:-50px;-webkit-animation:star2 2.4s ease-in infinite 0.5s;animation:star2 2.4s ease-in infinite 0.5s;}
+.star3{left:80%;top:-80px;-webkit-animation:star3 2s ease-in infinite 1.5s;animation:star3 2s ease-in infinite 1.5s;}
+@-webkit-keyframes star1{0%{opacity:.2;}
+100%{opacity:.9;left:0;top:100%;}
+}
+@keyframes star1{0%{opacity:.2;}
+100%{opacity:.9;left:0;top:100%;}
+}
+@-webkit-keyframes star2{0%{opacity:.2;}
+100%{opacity:.9;left:50%;top:100%;}
+}
+@keyframes star2{0%{opacity:.2;}
+100%{opacity:.9;left:50%;top:100%;}
+}
+@-webkit-keyframes star3{0%{opacity:.2;}
+100%{opacity:.9;left:25%;top:100%;}
+}
+@keyframes star3{
+	0%{opacity:.2;}
+100%{opacity:.9;left:25%;top:100%;}
+}

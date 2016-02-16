@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>fullPage例子: 资金保障，更安全，更理性！</title>
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="fp_wrapper" id="fp_wrapper">
+	<div class="fp_page" id="section0">
+         <div class="qbz_center">
+            <img class="g1" src="images/g_01.png" />
+            <img class="g2" src="images/g_02.png" />
+            <img class="g3" src="images/g_03.png" />
+        </div>
+	</div>
+    <div class="fp_page" id="section1">
+        <div class="qbz_center">
+            <img class="a1" src="images/a_01.png" />
+            <img class="a2" src="images/a_02.png" />
+            <img class="a3" src="images/a_03.png" />
+            <img class="a4" src="images/a_04.png" />
+            <img class="a5" src="images/a_05.png" />
+        </div>
+    </div>
+    <div class="fp_page" id="section2">
+         <div class="qbz_center">
+            <img class="b1" src="images/b_01.png" />
+            <img class="b2" src="images/b_02.png" />
+            <img class="b3" src="images/b_001.png" />
+            <img class="b4" src="images/b_002.png" />
+            <img class="b5" src="images/b_003.png" />
+            <img class="b6" src="images/b_004.png" />
+            <img class="b7" src="images/b_005.png" />
+            <img class="b8" src="images/b_006.png" />
+        </div>
+    </div>
+    <div class="fp_page" id="section3">
+         <div class="qbz_center">
+            <img class="c1" src="images/c_01.png" />
+            <img class="c2" src="images/c_02.png" />
+            <img class="c3" src="images/c_03.png" />
+            <img class="c4" src="images/c_04.png" />
+        </div>
+	</div>
+    <div class="fp_page" id="section4">
+         <div class="qbz_center">
+            <img class="d1" src="images/d_01.png" />
+            <img class="d2" src="images/d_02.png" />
+            <img class="d3" src="images/d_03.png" />
+            <img class="d4" src="images/d_04.png" />
+            <img class="d5" src="images/d_05.png" />
+            <img class="d6" src="images/d_06.png" />
+        </div>
+	</div>
+    <div class="fp_page" id="section5">
+         <div class="qbz_center">
+            <img class="e1" src="images/e_01.png" />
+            <img class="e2" src="images/e_02.png" />
+            <img class="e3" src="images/e_03.png" />
+            <img class="e4" src="images/e_04.png" />
+            <img class="e5" src="images/e_05.png" />
+            <a href="#"><img class="e6" src="images/e_06.png" /></a>
+        </div>
+	</div>
+</div>
+<div class="fp_star star1"></div>
+<div class="fp_star star2"></div>
+<div class="fp_star star3"></div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/fullPage.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    var fp = new fullPage({
+        // direction: 'left',
+        wrapper: '#fp_wrapper',
+        pageShow: true,
+        pageClass: 'fp_page',
+        navShow: true,
+        navClass: 'fp_navigation',
+        arrowShow: true,
+        arrowClass: 'fp_arrow',
+        titleShow: true,
+        text: ['文本提示11111', '文本222222', '文本提示333', '444', '55555', '提示6666'],
+        backwind: true,
+        delay: 500,
+        current: 'current',
+        before: 'backwind',
+        end: function(index) {
+            if (index === 2) {
+                alert('这是第三屏！');
+            }
+        }
+    });
+    
+});
+</script>
+</body>
+</html>
